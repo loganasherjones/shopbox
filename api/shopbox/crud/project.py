@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import urllib.parse
 
+from shopbox.db_models.project import Project
 from shopbox.models.pagination import Links
 from shopbox.models.project import PaginatedProject
-from shopbox.db_models.project import Project
 
 
 def get_multi(db_session, base_url, *, skip=0, limit=100) -> PaginatedProject:

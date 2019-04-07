@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from fastapi import Depends, APIRouter
-from starlette.requests import Request
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from starlette.requests import Request
 
 from shopbox import crud
-from shopbox.models.project import PaginatedProject
 from shopbox.api.utils.db import get_db
+from shopbox.models.project import PaginatedProject
 
 router = APIRouter()
 

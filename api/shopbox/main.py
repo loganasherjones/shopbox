@@ -3,10 +3,9 @@
 from fastapi import FastAPI
 from starlette.requests import Request
 
-from shopbox.core import config
 from shopbox.api.v1 import api_v1_router
+from shopbox.core import config
 from shopbox.db.session import Session
-
 
 app = FastAPI(title=config.PROJECT_NAME, openapi_url="/api/v1/openapi.json")
 

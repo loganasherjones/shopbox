@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
-from typing import List, Optional
-from .pagination import PaginationBase
+from typing import List
+
 from pydantic import BaseModel
+
+from .pagination import PaginationBase
 
 
 class ProjectBase(BaseModel):

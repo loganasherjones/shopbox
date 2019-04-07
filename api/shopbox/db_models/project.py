@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from sqlalchemy import Column, Integer, String
+
 from shopbox.db.base_class import Base
 
 
