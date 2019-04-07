@@ -19,7 +19,7 @@ const styles = () => ({
   },
 });
 
-function Layout(props) {
+export function Layout(props) {
   const { children, classes } = props;
   return (
     <div className={classes.root}>

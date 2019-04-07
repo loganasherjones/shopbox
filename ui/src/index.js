@@ -1,17 +1,23 @@
 import React from "react";
 import { render } from "react-dom";
+import { Provider } from "react-redux";
 import "typeface-roboto";
 import { BrowserRouter as Router } from "react-router-dom";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import configureStore from "./store/configureStore";
 import App from "./App";
 
+const store = configureStore();
+
 render(
-  <Router>
-    <>
-      <CssBaseline />
-      <App />
-    </>
-  </Router>,
+  <Provider store={store}>
+    <Router>
+      <>
+        <CssBaseline />
+        <App />
+      </>
+    </Router>
+  </Provider>,
   document.getElementById("root"),
 );
 

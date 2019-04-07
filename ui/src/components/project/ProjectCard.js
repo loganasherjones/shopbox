@@ -30,7 +30,7 @@ ProjectCard.propTypes = {
   project: PropTypes.object.isRequired,
 };
 
-function ProjectCard(props) {
+export function ProjectCard(props) {
   const { classes, project } = props;
   return (
     <Card className={classes.card}>
@@ -38,11 +38,7 @@ function ProjectCard(props) {
         <Typography gutterBottom variant="h5" component="h2">
           {project.displayName}
         </Typography>
-        <Typography>
-          {project.shortDescription}
-          This is a project. Here, you would put your project tagline or short
-          description.
-        </Typography>
+        <Typography variant="body1">{project.shortDescription}</Typography>
       </CardContent>
       <CardActions disableActionSpacing>
         <IconButton aria-label="Add project to favorites">

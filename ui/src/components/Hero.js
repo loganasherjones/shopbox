@@ -26,7 +26,7 @@ const styles = theme => ({
   },
 });
 
-function Hero(props) {
+export function Hero(props) {
   const { classes } = props;
   return (
     <div className={classes.heroUnit}>

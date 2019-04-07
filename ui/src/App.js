@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, withRouter, Route, Redirect } from "react-router-dom";
 import { compose } from "recompose";
 import Layout from "./components/Layout";
-import SplashScreen from "./SplashScreen";
+import SplashScreen from "./containers/SplashScreen";
 import Login from "./containers/Login";
 import Publish from "./containers/Publish";
 import Explore from "./containers/Explore";

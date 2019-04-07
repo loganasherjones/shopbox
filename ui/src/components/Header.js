@@ -17,7 +17,7 @@ const styles = () => ({
   grow: { flexGrow: 1 },
 });
 
-function Header(props) {
+export function Header(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
