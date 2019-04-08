@@ -13,7 +13,7 @@ Header.propTypes = {
 };
 
 const styles = () => ({
-  root: { flexGrow: 1 },
+  root: { flexGrow: 0 },
   grow: { flexGrow: 1 },
 });
 
