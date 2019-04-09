@@ -4,6 +4,7 @@ import { compose } from "recompose";
 import { withRouter } from "react-router-dom";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
+import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Hidden from "@material-ui/core/Hidden";
 import moment from "moment";
@@ -161,6 +162,12 @@ const styles = theme => ({
       marginRight: "auto",
     },
   },
+  wrapper: {
+    padding: theme.spacing.unit * 2,
+  },
+  root: {
+    paddingBottom: theme.spacing.unit * 2,
+  },
 });
 const options = {
   overrides: {
@@ -188,6 +195,9 @@ const options = {
         </li>
       )),
     },
+    img: {
+      component: props => <img {...props} style={{ maxWidth: "100%" }} />,
+    },
   },
 };
 
@@ -209,7 +219,9 @@ class ProjectView extends Component {
               <ProjectSidebar project={project} />
             </Hidden>
             <Grid item xs={12} md={9}>
-              <Markdown options={options}>{project.docs.readme}</Markdown>
+              <Paper className={classes.wrapper}>
+                <Markdown options={options}>{project.docs.readme}</Markdown>
+              </Paper>
             </Grid>
           </Grid>
         </div>
